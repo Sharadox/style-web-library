@@ -1,6 +1,6 @@
 {
   "name": "@sharadox/style-web-library",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Styles (themes) for websites: several independent style groups (colour, corners, fonts…), each with options, a default, System following the device and a remembered choice, applied before the first paint.",
   "private": false,
   "license": "SEE LICENSE IN LICENCA.md",

@@ -57,14 +57,14 @@ CSS uses each palette's keys as variables (`var(--background)`, `var(--radius)`)
 
 ## API
 
-| Import           | Export                                                                                                                                                             |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `…/definition`   | `defineStyles(configuration)` (validated), `resolveOption`, `findGroup`, `findOption`, `SYSTEM_STYLE`, `styleAttribute`, `styleChoiceAttribute`, `styleStorageKey` |
-| `…/style-script` | `<StyleScript configuration>`, `styleScript(configuration)` (the inline script)                                                                                    |
-| `…/style-sheet`  | `styleSheet(configuration)` (the CSS)                                                                                                                              |
-| `…/use-style`    | `useStyle(configuration, group)` → `{ choice, style, choices, choose }`                                                                                            |
-| `…/style-choice` | `styleChoices(group)`: switch order (light options, System, dark options)                                                                                          |
-| `…/apply`        | `applyStyles`, `styleApplyData` (used by the script)                                                                                                               |
+| Import           | Export                                                                                                                                                                                   |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `…/definition`   | `defineStyles(configuration)` (validated), `resolveOption`, `findGroup`, `findOption`, `SYSTEM_STYLE`, `styleAttribute`, `styleChoiceAttribute`, `styleStorageKey`                       |
+| `…/style-script` | `<StyleScript configuration>`, `styleScript(configuration)` (the inline script); it also renders `StyleKeeper`, so styles survive navigations that replace `<html>` (switching language) |
+| `…/style-sheet`  | `styleSheet(configuration)` (the CSS)                                                                                                                                                    |
+| `…/use-style`    | `useStyle(configuration, group)` → `{ choice, style, choices, choose }`                                                                                                                  |
+| `…/style-choice` | `styleChoices(group)`: switch order (light options, System, dark options)                                                                                                                |
+| `…/apply`        | `applyStyles`, `styleApplyData` (used by the script)                                                                                                                                     |
 
 **Choosing:**
 

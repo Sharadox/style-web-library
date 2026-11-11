@@ -1,4 +1,5 @@
 import { applyStyles, styleApplyData } from "@sharadox/style-web-library/apply";
+import { StyleKeeper } from "@sharadox/style-web-library/style-keeper";
 import { styleSheet } from "@sharadox/style-web-library/style-sheet";
 import type { StyleConfiguration } from "@sharadox/style-web-library/definition/type";
 import type { StyleScriptProperties } from "@sharadox/style-web-library/style-script/type";
@@ -14,7 +15,8 @@ export function styleScript(configuration: StyleConfiguration): string {
 
 /**
  * Put in `<head>` (and add `suppressHydrationWarning` to `<html>`): the CSS custom properties of every style, and
- * the script that picks each group's style before the first paint.
+ * the script that picks each group's style before the first paint, and `StyleKeeper`, which picks it again when a
+ * navigation replaces `<html>` (for example switching language).
  *
  * @example
  * <html lang="en" suppressHydrationWarning><head><StyleScript configuration={STYLES} /></head>…</html>
@@ -24,6 +26,7 @@ export function StyleScript({ configuration }: StyleScriptProperties) {
     <>
       <style dangerouslySetInnerHTML={{ __html: styleSheet(configuration) }} />
       <script dangerouslySetInnerHTML={{ __html: styleScript(configuration) }} />
+      <StyleKeeper groups={styleApplyData(configuration)} />
     </>
   );
 }
