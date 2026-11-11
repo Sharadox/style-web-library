@@ -1,6 +1,6 @@
 import { defineStyles } from "@sharadox/style-web-library/definition";
 
-/** Two independent groups: colour (with System) and corner. */
+/** Two independent groups: color (with System) and corner. */
 export const STYLES = defineStyles({
   groups: [
     {
@@ -25,7 +25,7 @@ export const STYLES = defineStyles({
   ],
 });
 
-/** A colour group that follows the device from the start. */
+/** A color group that follows the device from the start. */
 export const SYSTEM_STYLES = defineStyles({
   groups: [{ ...STYLES.groups[0], defaultChoice: "system", fallbackScheme: "light" }],
 });
