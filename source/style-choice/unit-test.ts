@@ -2,7 +2,7 @@ import { expect, test } from "vitest";
 import { styleChoices } from "@sharadox/style-web-library/style-choice";
 import { STYLES } from "@sharadox/style-web-library/test-fixture";
 
-test("colour switches put light options, then system, then dark options", () => {
+test("color switches put light options, then system, then dark options", () => {
   expect(styleChoices(STYLES.groups[0])).toEqual([
     { name: "white", kind: "option", scheme: "light" },
     { name: "system", kind: "system" },
