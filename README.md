@@ -1,6 +1,6 @@
 # @sharadox/style-web-library
 
-Styles (what other projects call themes) for websites, with **several independent style groups at once**: colour (Black, White, Midnight…), corners (sharp, rounded), font family, and so on. Each group has its own options, its default, an optional **System** choice that follows the device's light or dark setting, and a remembered manual choice. Everything is applied before the first paint, so the page never flashes the wrong style.
+Styles (what other projects call themes) for websites, with **several independent style groups at once**: color (Black, White, Midnight…), corners (sharp, rounded), font family, and so on. Each group has its own options, its default, an optional **System** choice that follows the device's light or dark setting, and a remembered manual choice. Everything is applied before the first paint, so the page never flashes the wrong style.
 
 ## Install
 
@@ -76,6 +76,6 @@ CSS uses each palette's keys as variables (`var(--background)`, `var(--radius)`)
 
 `pnpm verify` runs formatting, lint, type-check, tests with 100% coverage and the build. Branches follow `<feature>.development` → `development` → `index`, and releases are `v<version>` tags on `index`.
 
-## Licence
+## License
 
 Licença Sharadox de Código Aberto, versão 0.1.0. See [português](LICENCA.md) (the binding text) and the [English translation](LICENSE.md).

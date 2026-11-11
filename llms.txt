@@ -1,6 +1,6 @@
 # @sharadox/style-web-library
 
-> Multi-group styles (themes) for React/Next.js: each group (colour, corner, font…) has options with CSS-variable palettes, a default, optional "system" (prefers-color-scheme), and a remembered choice; applied pre-paint.
+> Multi-group styles (themes) for React/Next.js: each group (color, corner, font…) has options with CSS-variable palettes, a default, optional "system" (prefers-color-scheme), and a remembered choice; applied pre-paint.
 
 - defineStyles({ groups: [{ name, defaultChoice, options: [{ name, scheme?, palette }], systemDefaults?: { dark, light }, fallbackScheme?, storageKey? }] }) from `/definition` (validates)
 - <StyleScript configuration={STYLES} /> in <head>, with <html suppressHydrationWarning>
@@ -8,5 +8,5 @@
 - styleChoices(group): order light options, "system", dark options (for switches)
 - html attributes: data-style-<group>, data-style-<group>-choice; color-scheme set for groups with schemes
 - Storage: localStorage "style-<group>" (or storageKey); choosing the default removes it
-- Licence: Sharadox Open Source Licence 0.1.0
+- License: Sharadox Open Source License 0.1.0
 - /style-keeper StyleKeeper({ groups }) client component re-applying remembered styles on mount (rendered by StyleScript; fixes styles lost when a navigation replaces <html>, e.g. switching locale)
