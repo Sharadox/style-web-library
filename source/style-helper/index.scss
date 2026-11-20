@@ -1,0 +1,43 @@
+@use "sass:list";
+
+/// Sass helpers every Sharadox site shares. Only variables, functions and mixins: using it adds no CSS by itself, so
+/// it is safe to `@use` (or `@forward` from a site library's tokens) anywhere. Found through the Sass load path that
+/// the Sharadox build, test and Next.js configurations add: `@use "style-helper" as *;`.
+
+/// The easing of every entrance and transition: fast out, long settle.
+$ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+/// Below a viewport width.
+@mixin below($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
+/// The text color at a share of its strength, for lines, borders and quiet text that follow the style.
+@function tint($amount) {
+  @return color-mix(in srgb, var(--foreground) $amount, transparent);
+}
+
+/// An entrance tied to scrolling: plays as the element crosses `$range`, where scroll-driven animations exist and
+/// motion is welcome.
+@mixin on-scroll($keyframes, $range: entry 10% cover 40%) {
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+      animation: $keyframes linear both;
+      animation-timeline: view();
+      animation-range: $range;
+    }
+  }
+}
+
+/// No entrance replay after an in-place switch (language or style): the animation jumps to its end.
+@mixin skip-entrance($durations...) {
+  @if list.length($durations) == 0 {
+    $durations: 0s;
+  }
+  :global(:root[data-soft-navigation]) & {
+    animation-duration: $durations !important;
+    animation-delay: 0s !important;
+  }
+}

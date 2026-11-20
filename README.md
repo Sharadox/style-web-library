@@ -85,3 +85,20 @@ Smaller parts, mostly building blocks of the main exports:
 ## License
 
 Licença Sharadox de Código Aberto, versão 0.1.0. See [português](LICENCA.md) (the binding text) and the [English translation](LICENSE.md).
+
+## Sass helpers
+
+`style-helper` is a Sass module with no CSS of its own: the easing every site uses (`$ease`), a breakpoint mixin (`below`), the text color at a share of its strength (`tint`), a scroll-driven entrance (`on-scroll`) and the entrance skip after an in-place switch (`skip-entrance`). The Sharadox library build, test and Next.js configurations put this package's `distribution` on the Sass load path, so:
+
+```scss
+@use "style-helper" as *;
+
+.title {
+  @include on-scroll(rise);
+  @include below(720px) {
+    font-size: 2rem;
+  }
+}
+```
+
+A site library forwards it from its own tokens (`@forward "style-helper";`), so its components keep one `@use "style/token" as *;`.

@@ -14,3 +14,4 @@
 - /style-sheet: styleSheet(groups): the CSS of every style group
 - License: Sharadox Open Source License 0.1.0
 - /style-keeper StyleKeeper({ groups }) client component re-applying remembered styles on mount (rendered by StyleScript; fixes styles lost when a navigation replaces <html>, e.g. switching locale)
+- `style-helper` (Sass, not JavaScript): `@use "style-helper" as *;` gives $ease, below($width) {…}, tint($amount), on-scroll($keyframes, $range?), skip-entrance($durations...). No CSS of its own. Found through the Sass load path the Sharadox library build, vitest and Next.js configurations add (node_modules/@sharadox/style-web-library/distribution); site libraries `@forward` it from their tokens
