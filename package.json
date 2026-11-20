@@ -1,7 +1,7 @@
 {
   "name": "@sharadox/style-web-library",
-  "version": "0.2.3",
-  "description": "Styles (themes) for websites: several independent style groups (color, corners, fonts\u2026), each with options, a default, System following the device and a remembered choice, applied before the first paint.",
+  "version": "0.3.0",
+  "description": "Styles (themes) for websites: several independent style groups (color, corners, fonts…), each with options, a default, System following the device and a remembered choice, applied before the first paint.",
   "private": false,
   "license": "SEE LICENSE IN LICENCA.md",
   "author": "Sharadox <contact@sharadox.com>",
@@ -25,7 +25,8 @@
     "LICENCA.md",
     "LICENSE.md",
     "NOTICE.md",
-    "llms.txt"
+    "llms.txt",
+    "CHANGELOG.md"
   ],
   "sideEffects": false,
   "engines": {
@@ -36,7 +37,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "rm -rf distribution && tsc -p tsconfig.build.json",
+    "build": "library-build",
     "lint": "eslint --max-warnings=0 .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
@@ -61,6 +62,7 @@
   "homepage": "https://github.com/Sharadox/style-web-library#readme",
   "devDependencies": {
     "@sharadox/es-lint-configuration-web-library": "^0.1.1",
+    "@sharadox/library-build-web-library": "^0.1.2",
     "@sharadox/prettier-configuration-web-library": "^0.1.0",
     "@sharadox/turborepo-configuration-web-library": "^0.1.0",
     "@sharadox/type-script-configuration-web-library": "^0.2.0",
@@ -78,6 +80,7 @@
     "prettier": "^3.10.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
+    "sass": "^1.108.2",
     "turbo": "^2.11.10",
     "typedoc": "^0.28.20",
     "typescript": "6.0.3",
