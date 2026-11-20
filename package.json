@@ -1,7 +1,7 @@
 {
   "name": "@sharadox/style-web-library",
-  "version": "0.2.2",
-  "description": "Styles (themes) for websites: several independent style groups (color, corners, fonts…), each with options, a default, System following the device and a remembered choice, applied before the first paint.",
+  "version": "0.2.3",
+  "description": "Styles (themes) for websites: several independent style groups (color, corners, fonts\u2026), each with options, a default, System following the device and a remembered choice, applied before the first paint.",
   "private": false,
   "license": "SEE LICENSE IN LICENCA.md",
   "author": "Sharadox <contact@sharadox.com>",
@@ -27,9 +27,7 @@
     "NOTICE.md",
     "llms.txt"
   ],
-  "sideEffects": [
-    "**/*.css"
-  ],
+  "sideEffects": false,
   "engines": {
     "node": ">=26"
   },
