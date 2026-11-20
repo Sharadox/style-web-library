@@ -8,5 +8,9 @@
 - styleChoices(group): order light options, "system", dark options (for switches)
 - html attributes: data-style-<group>, data-style-<group>-choice; color-scheme set for groups with schemes
 - Storage: localStorage "style-<group>" (or storageKey); choosing the default removes it
+- /style-choice: styleChoices(group): a group's switch entries in display order (light, system, dark)
+- /style-script: styleScript and StyleScript: the inline script that applies remembered styles before the first paint
+- /use-style: useStyle(group): a group's choice and option in use, with choose()
+- /style-sheet: styleSheet(groups): the CSS of every style group
 - License: Sharadox Open Source License 0.1.0
 - /style-keeper StyleKeeper({ groups }) client component re-applying remembered styles on mount (rendered by StyleScript; fixes styles lost when a navigation replaces <html>, e.g. switching locale)

@@ -72,6 +72,12 @@ CSS uses each palette's keys as variables (`var(--background)`, `var(--radius)`)
 - Unknown stored values fall back to the default.
 - With System, the page follows the device and other tabs live.
 
+### Also exported
+
+Smaller parts, mostly building blocks of the main exports:
+
+- `…/style-keeper`: StyleKeeper: applies every group's remembered style again when it mounts (layouts that replace <html>)
+
 ## Develop
 
 `pnpm verify` runs formatting, lint, type-check, tests with 100% coverage and the build. Branches follow `<feature>.development` → `development` → `index`, and releases are `v<version>` tags on `index`.
