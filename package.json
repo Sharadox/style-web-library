@@ -1,6 +1,6 @@
 {
   "name": "@sharadox/style-web-library",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Styles (themes) for websites: several independent style groups (color, corners, fonts…), each with options, a default, System following the device and a remembered choice, applied before the first paint.",
   "private": false,
   "license": "SEE LICENSE IN LICENCA.md",
@@ -86,7 +86,7 @@
     "vitest": "^5.1.0"
   },
   "dependencies": {
-    "@sharadox/web-library": "^0.5.0"
+    "@sharadox/web-library": "^0.8.0"
   },
   "peerDependencies": {
     "react": ">=19"
